@@ -1,0 +1,77 @@
+{
+  "plugins": [
+    "babel",
+    "flowtype"
+  ],
+
+  "parser": "babel-eslint",
+
+  "rules": {
+    "semi":   2,
+    "quotes": [2, "single"],
+    "key-spacing": [
+      2, {
+        "beforeColon": false,
+        "afterColon": true
+      }
+    ],
+    "eol-last": 0,
+    "strict": [2, "never"],
+    "camelcase": [2, {properties: "never"}],
+    "no-shadow": 0,
+    "indent": [
+      2,
+      2,
+      {
+        "VariableDeclarator": {
+          "var": 2,
+          "let": 2,
+          "const": 2
+        },
+        "SwitchCase":1
+      }
+    ],
+    "babel/generator-star-spacing": 1,
+    "babel/new-cap": 0,
+    "babel/array-bracket-spacing": 1,
+    "babel/object-curly-spacing": 0,
+    "babel/object-shorthand": 1,
+    "babel/arrow-parens": 1,
+    "babel/no-await-in-loop": 1,
+    "flowtype/require-return-type": [
+        1,
+        "always",
+        {
+            "annotateUndefined": "never"
+        }
+    ],
+    "flowtype/space-after-type-colon": [
+        1,
+        "always"
+    ],
+    "flowtype/space-before-type-colon": [
+        1,
+        "never"
+    ],
+    "flowtype/type-id-match": [
+        1,
+        "^([A-Z][a-z0-9]+)+Type$"
+    ]
+  },
+
+  "globals": {},
+
+  "env": {
+    "es6": true
+  },
+
+  "ecmaFeatures": {
+    "modules": true,
+    "jsx": true
+  },
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": false
+    }
+  }
+}
