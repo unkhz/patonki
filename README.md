@@ -1,10 +1,11 @@
- # Patonki boilerplate
+# Patonki boilerplate
 
 ### Key ingredients
   * [React](https://facebook.github.io/react)
   * [Redux](https://github.com/rackt/redux)
   * [Webpack](https://webpack.github.io)
   * [Babel](https://babeljs.io)
+  * [ESlint](http://eslint.org/s)
   * [Flow](http://flowtype.org/)
   * [Karma](https://karma-runner.github.io/)
   * [Mocha](https://mochajs.org/)
