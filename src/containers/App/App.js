@@ -12,7 +12,7 @@ export class App extends Component {
   static defaultProps = {
   };
 
-  render(): React.Element {
+  render(): React.Element<any> {
     const { example } = this.props;
     return (
       <div className="app">

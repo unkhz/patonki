@@ -1,4 +1,4 @@
-# Patonki boilerplate
+ # Patonki boilerplate
 
 ### Key ingredients
   * [React](https://facebook.github.io/react)
@@ -13,17 +13,8 @@
 - `npm run dev-server` starts local development web server in port 9999
 - `npm start` starts production build and run local web server in port 9999
 - `npm run build` starts production build
-- `npm test` runs tests once
-- `npm run test-watch` runs tests and watches for changes
-
-
-### Type checking with flow
-
-Flow is not included as a dependency for portability reasons. You want to install it
-globally..
-
-    npm install -g flowtype
-
-..and run it manually when needed
-
-    flow
+- `npm test` runs unit tests, eslint check and flow check once
+- `npm run karma-watch` runs unit tests and watches for changes
+- `npm run karma` runs unit tests once
+- `npm run eslint` runs eslint check once
+- `npm run flow` runs flow check once

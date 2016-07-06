@@ -12,6 +12,7 @@ module.exports = function (config) {
       webpack,
       'karma-chai',
       'karma-mocha',
+      'karma-eslint',
       'karma-sourcemap-loader',
       'karma-webpack',
       'karma-coverage',
@@ -21,7 +22,7 @@ module.exports = function (config) {
     ],
     browsers: ['PhantomJS'],
     preprocessors: {
-      '../src/**/*.js': ['webpack', 'sourcemap'],
+      '../src/**/*.js': ['eslint', 'webpack', 'sourcemap'],
       '../src/**/*.spec.js': ['webpack', 'sourcemap'],
       '../test/**/*.spec.js': ['webpack', 'sourcemap'],
       '../test/tests.bundle.js': ['webpack'],
@@ -49,6 +50,15 @@ module.exports = function (config) {
       }
     },
     webpackMiddleware: { noInfo: true },
+
+    eslint: {
+      stopOnError: true,
+      stopOnWarning: true,
+      showWarnings: true,
+      engine: {
+        configFile: '../.eslintrc'
+      }
+    },
 
     reporters: ['mocha', 'coverage'],
 
