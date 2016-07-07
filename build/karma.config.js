@@ -12,7 +12,6 @@ module.exports = function (config) {
       webpack,
       'karma-chai',
       'karma-mocha',
-      'karma-eslint',
       'karma-sourcemap-loader',
       'karma-webpack',
       'karma-coverage',
@@ -49,16 +48,8 @@ module.exports = function (config) {
         alias: paths
       }
     },
-    webpackMiddleware: { noInfo: true },
 
-    eslint: {
-      stopOnError: true,
-      stopOnWarning: true,
-      showWarnings: true,
-      engine: {
-        configFile: '../.eslintrc'
-      }
-    },
+    webpackMiddleware: { noInfo: true },
 
     reporters: ['mocha', 'coverage'],
 
