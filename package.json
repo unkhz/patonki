@@ -3,7 +3,7 @@
   "description": "",
   "repository": "",
   "author": "",
-  "license": "",
+  "license": "MIT",
   "version": "0.0.1",
   "scripts": {
     "test": "npm run eslint && npm run karma && npm run flow",
