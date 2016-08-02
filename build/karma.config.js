@@ -21,7 +21,7 @@ module.exports = function (config) {
     ],
     browsers: ['PhantomJS'],
     preprocessors: {
-      '../src/**/*.js': ['eslint', 'webpack', 'sourcemap'],
+      '../src/**/*.js': ['webpack', 'sourcemap'],
       '../src/**/*.spec.js': ['webpack', 'sourcemap'],
       '../test/**/*.spec.js': ['webpack', 'sourcemap'],
       '../test/tests.bundle.js': ['webpack'],
