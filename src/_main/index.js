@@ -18,7 +18,7 @@ export function mount(rootNode: Node) {
 
   ReactDOM.render(
     <Provider store={store}>
-      <app.App />
+      <App />
     </Provider>,
     rootNode
   );
