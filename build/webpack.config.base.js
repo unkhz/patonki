@@ -34,7 +34,7 @@ export const CONFIG = {
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
     new HtmlWebpackPlugin({
-      template: path.join(SRC_PATH, 'index.html')
+      template: path.join(SRC_PATH, '_main', 'index.html')
     })
   ]
 };
