@@ -20,4 +20,4 @@ suppress_comment= \\(.\\|\n\\)*\\$FlowFixMe
 .*/node_modules/npmconf/.*
 
 [libs]
-./src/types
+./src/_types
