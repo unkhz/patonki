@@ -1,9 +1,18 @@
 // @flow
 import { createStore, applyMiddleware } from 'redux';
-import Thunk from 'redux-thunk';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import thunkMiddleware from 'redux-thunk';
 
-export const createWithMiddleware = applyMiddleware(Thunk)(createStore);
+const composeEnhancer = composeWithDevTools({
+  // Specify here name, actionsBlacklist, actionsCreators and other options
+});
 
-export default function(rootReducer, initialState = {}): Function {
-  return createWithMiddleware(rootReducer, initialState);
+const defaultMiddlewares = [
+  thunkMiddleware
+];
+
+export default function(rootReducer, middlewares = defaultMiddlewares, preloadedState = {}): Function {
+  return createStore(rootReducer, preloadedState, composeEnhancer(applyMiddleware(
+    ...middlewares,
+  )));
 }
