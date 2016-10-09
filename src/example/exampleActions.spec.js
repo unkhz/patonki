@@ -2,10 +2,12 @@ import * as actions from './exampleActions';
 
 describe('example/actions', () => {
 
-  describe('runExample', () => {
-    assert.deepEqual(actions.runExample(), {
-      type: actions.RUN_EXAMPLE,
-      payload: {},
+  describe('updateExampleContent', () => {
+    assert.deepEqual(actions.updateExampleContent('some content'), {
+      type: actions.UPDATE_EXAMPLE_CONTENT,
+      payload: {
+        content: 'some content'
+      },
       error: {},
     });
   });

@@ -4,12 +4,21 @@ import { connect } from 'react-redux';
 
 import './App.scss';
 
-import Example from 'src/example';
+import Example, { actions } from 'src/example';
+
+const {
+  updateExampleContent,
+} = actions;
 
 export class App extends Component {
 
   static defaultProps = {
+    updateExampleContent: (): any => undefined,
   };
+
+  componentDidMount() {
+    this.props.updateExampleContent('Hello world!');
+  }
 
   render(): React.Element<any> {
     const { example } = this.props;
@@ -25,11 +34,6 @@ function mapStateToProps(state: Object): Object {
   return state;
 }
 
-function mapDispatchToProps(dispatch: Function): Object {
-  return {};
-}
-
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+  mapStateToProps, { updateExampleContent },
 )(App);

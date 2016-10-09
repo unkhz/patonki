@@ -11,9 +11,9 @@ describe('example/Example', () => {
     assert.equal(wrapper.find('.example').length, 1);
   });
 
-  it('renders prop value as the text content', () => {
+  it('renders prop content as the text content', () => {
     const props = {
-      value: 'something'
+      content: 'something'
     };
     const wrapper = shallow(<Example {...props} />);
     assert.equal(wrapper.find('.example').text(), 'something');

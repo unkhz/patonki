@@ -5,9 +5,9 @@ import './Example.scss';
 export default class Example extends Component {
 
   render(): React.Element<any> {
-    const {value} = this.props;
+    const {content} = this.props;
     return (
-      <div className="example">{value}</div>
+      <div className="example">{content}</div>
     );
   }
 

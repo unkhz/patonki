@@ -1,11 +1,13 @@
 // @flow
 
-export const RUN_EXAMPLE = 'RUN_EXAMPLE';
+export const UPDATE_EXAMPLE_CONTENT = 'UPDATE_EXAMPLE_CONTENT';
 
-export function runExample(): ActionType {
+export function updateExampleContent(content: string): ActionType {
   return {
-    type: RUN_EXAMPLE,
-    payload: {},
+    type: UPDATE_EXAMPLE_CONTENT,
+    payload: {
+      content,
+    },
     error: {},
   };
 }
