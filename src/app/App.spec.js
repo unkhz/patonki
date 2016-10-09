@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TestUtils, {Simulate} from 'react-addons-test-utils';
-import ConnectedApp, {App} from 'containers/App';
-import {createWithMiddleware} from 'store';
 import {Provider} from 'react-redux';
+import TestUtils, {Simulate} from 'react-addons-test-utils';
 import {assert} from 'chai';
 import {spy} from 'sinon';
+
+import ConnectedApp, {App} from './App';
 
 function getNode(element: React.Element): Node {
   const node = TestUtils.renderIntoDocument(

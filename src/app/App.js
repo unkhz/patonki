@@ -1,11 +1,10 @@
 // @flow
 import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
-import * as actions from 'actions/Actions';
-import Example from 'components/Example';
 import { connect } from 'react-redux';
+
 import './App.scss';
 
+import Example from 'src/example';
 
 export class App extends Component {
 
@@ -27,9 +26,7 @@ function mapStateToProps(state: Object): Object {
 }
 
 function mapDispatchToProps(dispatch: Function): Object {
-  return {
-    actions: bindActionCreators(actions, dispatch)
-  };
+  return {};
 }
 
 export default connect(

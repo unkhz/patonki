@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import TestUtils, {Simulate} from 'react-addons-test-utils';
-import Example from 'components/Example';
+import Example from './Example';
 
 function getNode(element: React.Element): Node {
   const node = TestUtils.renderIntoDocument(

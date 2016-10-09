@@ -21,3 +21,16 @@ Diverged from an early version of [rr-boilerplate](https://github.com/a-tarasyuk
 - `npm run karma` runs unit tests once
 - `npm run eslint` runs eslint check once
 - `npm run flow` runs flow check once
+
+### Folder structure
+The folder structure is organized based on modules, rather than design patterns. This generally leads to more cohesion in the application code.
+
+    .
+    ├── build         webpack, karma, paths configuration
+    ├── dist          generated files
+    ├── src           source files
+    │   ├── _main     main module
+    │   ├── _types    common flow types module
+    │   ├── app       app container module
+    │   └── example   example feature module
+    └── test          test bundle

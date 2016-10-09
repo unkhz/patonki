@@ -1,4 +1,5 @@
-import { CONFIG, ROOT_PATH } from './webpack.config.base';
+import { CONFIG } from './webpack.config.base';
+import paths from './paths';
 import webpack from 'webpack';
 import merge from './helpers/merge';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
@@ -6,7 +7,7 @@ import CompressionPlugin from 'compression-webpack-plugin';
 
 export default merge({
   output: {
-    path: `${ ROOT_PATH }/dist`,
+    path: paths.dist,
     publicPath: '',
     filename: 'bundle-[hash].js'
   },

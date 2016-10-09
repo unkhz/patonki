@@ -1,13 +1,14 @@
+import path from 'path';
 import paths from './paths';
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 export const ROOT_PATH = paths.root;
-export const APP_PATH = paths.app;
+export const SRC_PATH = paths.src;
 export const CONFIG = {
-  entry: `${ APP_PATH }/main`,
-  context: APP_PATH,
+  entry: path.join(SRC_PATH, '_main/index'),
+  context: SRC_PATH,
 
   module: {
     preLoaders: [
@@ -33,7 +34,7 @@ export const CONFIG = {
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
     new HtmlWebpackPlugin({
-      template: `${ APP_PATH }/template.html`
+      template: path.join(SRC_PATH, 'index.html')
     })
   ]
 };
