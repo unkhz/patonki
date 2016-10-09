@@ -1,24 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import TestUtils, {Simulate} from 'react-addons-test-utils';
+
+import {shallow} from 'enzyme';
 import {assert} from 'chai';
 import {spy} from 'sinon';
 
-import ConnectedApp, {App} from './App';
+import {App} from './App';
+import Example from 'src/example';
 
-function getNode(element: React.Element): Node {
-  const node = TestUtils.renderIntoDocument(
-    element
-  );
-  return ReactDOM.findDOMNode(node);
-}
-
-describe('App', () => {
+describe('app/App', () => {
 
   it('renders without props', () => {
-    const node = getNode(<App />);
-    assert.equal(node.nodeType, 1);
+    const wrapper = shallow(<App />);
+    assert.equal(wrapper.find('.app').length, 1);
+  });
+
+  it('renders an Example', () => {
+    const wrapper = shallow(<App />);
+    assert.isTrue(wrapper.contains(<Example />));
   });
 
 });

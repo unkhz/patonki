@@ -31,7 +31,7 @@ module.exports = function (config) {
       module: {
         loaders: [{
           test: /\.(js|jsx)$/, exclude: /node_modules/,
-          loader: 'babel-loader'
+          loader: 'babel-loader',
         },
         {
           test: /\.scss$/,
@@ -43,6 +43,12 @@ module.exports = function (config) {
           exclude: /(spec\.js|node_modules\/|test\/)/,
           loader: 'istanbul-instrumenter'
         }]
+      },
+      externals: {
+        'cheerio': 'window',
+        'react/addons': true,
+        'react/lib/ExecutionEnvironment': true,
+        'react/lib/ReactContext': true
       },
       resolve: {
         extensions: ['', '.js', '.scss'],

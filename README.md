@@ -11,6 +11,7 @@ Diverged from an early version of [rr-boilerplate](https://github.com/a-tarasyuk
   * [Flow](http://flowtype.org/)
   * [Karma](https://karma-runner.github.io/)
   * [Mocha](https://mochajs.org/)
+  * [Enzyme](http://airbnb.io/enzyme/)
 
 ### Build tasks
 - `npm run dev-server` starts local development web server in port 9999

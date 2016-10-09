@@ -1,23 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TestUtils, {Simulate} from 'react-addons-test-utils';
+import {shallow} from 'enzyme';
+
 import Example from './Example';
 
-function getNode(element: React.Element): Node {
-  const node = TestUtils.renderIntoDocument(
-    element
-  );
-  return ReactDOM.findDOMNode(node);
-}
+describe('example/Example', () => {
 
-describe('Example', () => {
+  it('renders without props', () => {
+    const wrapper = shallow(<Example />);
+    assert.equal(wrapper.find('.example').length, 1);
+  });
 
-  it('renders', () => {
+  it('renders prop value as the text content', () => {
     const props = {
-      value: 1
+      value: 'something'
     };
-    const node = getNode(<Example {...props} />);
-    assert.equal(node.className, 'example');
+    const wrapper = shallow(<Example {...props} />);
+    assert.equal(wrapper.find('.example').text(), 'something');
   });
 
 });
