@@ -24,9 +24,10 @@ module.exports = function (config) {
       '../src/**/*.js': ['webpack', 'sourcemap'],
       '../src/**/*.spec.js': ['webpack', 'sourcemap'],
       '../test/**/*.spec.js': ['webpack', 'sourcemap'],
-      '../test/tests.bundle.js': ['webpack'],
+      '../test/tests.bundle.js': ['webpack', 'sourcemap'],
     },
     webpack: {
+      devtool: 'inline-source-map',
       module: {
         loaders: [{
           test: /\.(js|jsx)$/, exclude: /node_modules/,
